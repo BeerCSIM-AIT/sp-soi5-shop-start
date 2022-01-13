@@ -28,12 +28,12 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Chocolate Cake</td>
-                            <td>Food</td>
-                            <td>120</td>
-                            <td>100</td>
+                        <tr th:each="p: ${products}">
+                            <td th:text="${p.id}"></td>
+                            <td th:text="${p.name}"></td>
+                            <td></td>
+                            <td th:text="${p.price}"></td>
+                            <td th:text="${p.unitInStock}"></td>
                             <td>
                                 <a class="btn btn-info btn-sm">
                                     Edit
