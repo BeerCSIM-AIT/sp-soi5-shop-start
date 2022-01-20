@@ -22,4 +22,18 @@ public class ProductService {
     public Product getById(int id){
         return productRepository.getById(id);
     }
+
+    // get products by name
+    public List<Product> findByName(String name){
+        return productRepository.findByNameContaining(name);
+    }
+
+    public List<Product> findByPrice(double price){
+        return productRepository.findByPriceLessThanEqual(price);
+    }
+
+    public List<Product> findByUnitInStock(int unit){
+        return productRepository.findByUnitInStockGreaterThan(unit);
+    }
+
 }
